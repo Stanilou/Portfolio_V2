@@ -65,6 +65,12 @@ header > div > ul > li > a {
     text-decoration: none;
 }
 
+header > div > ul > li > a.active {
+    text-decoration: 2px underline var(--violet-clair);
+    text-underline-offset: 5px;
+}
+
+
 header > div > button {
     width: 160px;
     height: 40px;
@@ -104,13 +110,123 @@ header > div > button > a > img {
 
     /* HOME
     ******************************/
-
-    .home > img {
+    .home {
+        position: relative; 
         width: 100vw;
         height: 100vh;
-        display: block;
+        overflow: hidden;
+    }
+    
+    .home > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
         filter: brightness(0.6);
     }
+    
+    .home > div {
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        color: var(--blanc); 
+        text-align: center; 
+        z-index: 2;
+    }
+    
+    .home > div > p {
+        font-size: 20px; 
+        font-weight: 300;
+        line-height: 2.5;
+        margin: 0 0 15px;
+        width: 800px;
+    }
+    
+    .home > div > p:first-of-type {
+        font-size: 65px; 
+        font-weight: 800;
+        margin: 0;
+        text-shadow: 0 0 5px var(--blanc), 0 0 10px var(--violet-clair), 0 0 15px var(--blanc);
+    }
+
+    .separation-line {
+        width: 600px;
+        border-bottom: 2px solid var(--gris-clair);
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        margin: 10px auto; 
+    }
+    
+    /* SOCIAL ICONS
+    ******************************/
+    .social-icons-container-home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px auto;
+    }
+
+    .social-icon-home {
+        width: 50px;
+        height: 50px;
+        border: 2px solid var(--gris-clair);
+        border-radius: 50%;
+        background: none;
+        margin: 0 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .social-icon-home:hover {
+        border-color: var(--blanc);
+        transform: scale(1.1);
+    }
+
+    .social-icon-home > div {
+        width: 25px;
+        height: 25px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    /* INDIVIDUAL SOCIAL ICONS */
+    .linkedin-icon-home {
+        background-image: url(Images/Icones/linkedin-gris-clair.png);
+    }
+
+    .social-icon-home:hover .linkedin-icon-home {
+        background-image: url(Images/Icones/linkedin-blanc.png);
+    }
+
+    .github-icon-home {
+        background-image: url(Images/Icones/github-gris-clair.png);
+    }
+
+    .social-icon-home:hover .github-icon-home {
+        background-image: url(Images/Icones/github-blanc.png);
+    }
+
+    .instagram-icon-home {
+        background-image: url(Images/Icones/instagram-gris-clair.png);
+    }
+
+    .social-icon-home:hover .instagram-icon-home {
+        background-image: url(Images/Icones/instagram-blanc.png);
+    }
+
+    .discord-icon-home {
+        background-image: url(Images/Icones/discord-gris-clair.png);
+    }
+
+    .social-icon-home:hover .discord-icon-home {
+        background-image: url(Images/Icones/discord-blanc.png);
+    }
+    
 
     /* ABOUT ME
     ******************************/
@@ -433,6 +549,7 @@ footer {
 
 .social-icon:hover {
     border-color: var(--blanc);
+    transform: scale(1.1);
 }
 
 .social-icon > div {
