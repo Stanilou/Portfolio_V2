@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanislas ROLLAND</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header>
+        <div>
+            <img src="Images/Logos/logo-violet.png" alt="Logo-Violet" />
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#interests">Interests</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <button><a href="#contact"><img src="Images/Icones/email-blanc.png">Contact Me</a></button>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <div id="home" class="home">
+            <img src="Images/Gifs/fond-accueil.gif" />
+        </div>
+
+        <div id="about" class="about-me">
+            <div>
+                <img src="Images/Images/photo-profil.png" />
+            </div>
+
+            <div>
+                <p>ABOUT ME</p>
+                <div>
+                    <p>Curious, rigorous and always eager to learn, I'm particularly interested in team projects and technical challenges. I've already taken part in a number of concrete projects in web development, data analysis and software design, which you can find out more about below.</p>
+                    <p>Today, I'm planning a career as a fullstack developer, capable of designing complete applications, from the database to the user interface, while automating processes and creating powerful and useful tools. I'm currently doing an internship as a developer at NORGAY IT & DIGITAL SERVICES, which will enable me to consolidate my skills in a stimulating professional environment.</p>    
+                </div>
+
+                <div>
+                    <div>
+                        <p>Contact Details</p>
+                        <p>Stanislas ROLLAND</p>
+                        <p>(+33) 7 67 82 13 56</p>
+                        <p>stanislasrolland05@gmail.com</p>
+                    </div>
+                    <button><img src="Images/Icones/telecharger-blanc.png">Download Resume</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="resume" class="resume">
+            <div class="education">
+                <p class="title-studies-section">EDUCATION</p>
+                <div>
+                    <div>
+                        <p class="title-studies-section">Lannion IUT</p>
+                        <div>
+                            <p>BUT Informatique</p>
+                            <img src="Images/Icones/point-violet-clair.png" />
+                            <p>2023 - Today</p>
+                        </div>
+                        <p>Specialisation in data administration, management and exploitation</p>
+                    </div>
+
+                    <div>
+                        <p class="title-studies-section">Jean Moulin High School</p>
+                        <div>
+                            <p>General Baccalaureate</p>
+                            <img src="Images/Icones/point-violet-clair.png" />
+                            <p>2020 - 2023</p>
+                        </div>
+                        <p>Specialisation in Mathematics and Numerical & Computer Sciences</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <p class="title-studies-section">SKILLS</p>
+                <div>
+                    <div>
+                        <p class="title-studies-section">Programming</p>
+                        <p>Throughout my studies, I developed strong skills in several programming languages, including PHP, Python, Java, C, and Visual Basic, allowing me to adapt to different types of projects and technologies.</p>
+                    </div>
+
+                    <div>
+                        <p class="title-studies-section">Web Development</p>
+                        <p>As part of my studies, I became proficient in web development technologies including HTML, CSS, and JavaScript, enabling me to design responsive and user-friendly interfaces.</p>
+                    </div>
+
+                    <div>
+                        <p class="title-studies-section">Database</p>
+                        <p>Through my academic projects, I gained hands-on experience with database technologies like PostgreSQL and MySQL, from designing schemas to writing complex queries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-management">
+                <p class="title-studies-section">PROJECT MANAGEMENT</p>
+                <div>
+                    <div>
+                        <p class="title-studies-section">Tools</p>
+                        <p>During my training at BUT Informatique, I learnt to evolve in different development environments such as Linux and Windows, as well as in technical environments such as Docker for containerisation, or Eclipse and Visual Studio Code for application development.</p>
+                    </div>
+
+                    <div>
+                        <p class="title-studies-section">Manger</p>
+                        <p>I regularly use collaborative tools such as GitHub, GitLab and Jira for version management and project tracking, as well as Figma for creating mock-ups and UX/UI. This diversity allows me to adapt easily to team workflows and corporate projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="contact-form">
+            <div class="title-contact-form">
+                <img src="Images/Icones/email-blanc.png" />
+                <p>CONTACT ME</p>
+            </div>
+
+            <div class="form-contact-infos">
+                <form action="contact.php" method="POST">
+                    <div>
+                        <label for="name">Name <span>*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email <span>*</span></label>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="subject">Subject <span></span></label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+
+                    <div>
+                        <label for="message">Message <span>*</span></label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                </form>
+
+                <div class="address-phone">
+                    <p>Address & Phone</p>
+                    <p>Stanislas ROLLAND</p>
+                    <p>20 Résidence Louise Michel</p>
+                    <p>Châteaulin, 29150 France</p>
+                    <p>(+33) 7 67 82 13 56</p>
+                    <button><img src="Images/Icones/envoyer-blanc.png" />Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="back-to-top">
+            <a href="#top"><div class="arrow-top-icon"></div></a>
+        </div>
+
+        <div class="social-icons-container">
+            <div class="social-icon">
+                <div class="linkedin-icon"></div>
+            </div>
+
+            <div class="social-icon">
+                <div class="github-icon"></div>
+            </div>
+
+            <div class="social-icon">
+                <div class="instagram-icon"></div>
+            </div>
+            
+            <div class="social-icon">
+                <div class="discord-icon"></div>
+            </div>
+        </div>
+
+        <div class="credits">
+            <p>© 2025</p>
+            <img src="Images/Icones/point-violet-clair.png" /> 
+            <p>Designed by <span>Stanislas ROLLAND</span></p>
+        </div>
+
+    </footer>
+
+    <script>
+        const header = document.querySelector("header");
+      
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        });
+      </script>
+      
+
+</body>
+</html>

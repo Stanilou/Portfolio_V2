@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    --noir-profond: rgb(0, 0, 0);
+    --gris-anthracite: rgb(26, 26, 26);
+    --gris-sombre: rgb(51, 51, 51);
+    --gris-clair: rgb(189, 189, 189);
+    --blanc: rgb(255, 255, 255);
+    --violet-sombre: rgb(75, 0, 110);
+    --violet-clair: rgb(114, 2, 145);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+
+
+/* HEADER
+******************************/
+header.scrolled {
+    background-color: var(--noir-profond);
+    transition: background-color 0.2s ease;
+}
+  
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header > div:first-of-type {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header > div > ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+header > div > ul > li > a {
+    color: var(--blanc);
+    text-decoration: none;
+}
+
+header > div > button {
+    width: 160px;
+    height: 40px;
+    background-color: var(--violet-clair);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header > div > button:hover {
+    background-color: var(--violet-sombre);
+}
+
+header > div > button > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanc);
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+header > div > button > a > img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+
+
+
+/* MAIN
+******************************/
+
+    /* HOME
+    ******************************/
+
+    .home > img {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        filter: brightness(0.6);
+    }
+
+    /* ABOUT ME
+    ******************************/
+    .about-me {
+        color: var(--blanc);
+        width: 100%;
+        height: 100%;
+        background-color: var(--gris-anthracite);
+        padding: 50px 200px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .about-me > div > img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-me > div:first-of-type {
+        padding-right: 50px;
+    }
+
+    .about-me > div > p {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .about-me > div > p {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .about-me > div > div:last-of-type {
+        display: flex;
+    }
+
+    .about-me > div > div > p {
+        color: var(--gris-clair);
+        font-weight: 300;
+        margin-bottom: 25px;
+    }
+
+    .about-me > div > div > div > p {
+        color: var(--gris-clair);
+        font-weight: 300;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .about-me > div > div > div > p:first-of-type {
+        color: var(--blanc);
+        font-weight: 800;
+    }
+
+    .about-me > div > p:first-child {
+        color: var(--blanc);
+        font-weight: 800;
+        margin-bottom: 25px;
+    }
+
+    .about-me button {
+        color: var(--blanc);
+        font-size: 15px;
+        font-weight: 800;
+        background-color: var(--violet-clair);
+        border: none;
+        border-radius: 5px;
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 40px;
+    }
+
+    .about-me button:hover {
+        background-color: var(--violet-sombre);
+    }
+
+    .about-me button > img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+
+
+    /* RESUME
+    ******************************/
+    .resume {
+        font-size: 15px;
+        color: var(--gris-anthracite);
+        margin: 50px 300px;
+        font-style: italic;
+    }
+
+    .resume > div > div > div {
+        padding-bottom: 25px;
+    }
+
+    .title-resume-section {
+        font-weight: 800;
+        color: var(--noir-profond);
+        font-style: normal;
+        padding-bottom: 5px;
+    }
+
+    .education, .skills, .project-management {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 50px; 
+    }
+
+    .education > p, .skills > p, .project-management > p {
+        width: 200px;
+        font-weight: 800;
+        text-decoration: 2px underline var(--violet-clair);
+        text-underline-offset: 5px;
+        padding-bottom: 5px;
+    }
+
+    .education > div, .skills > div, .project-management > div {
+        flex: 1;
+    }
+
+    .education > div > div > div {
+        display: flex;
+        align-items: center;
+        font-style: italic;
+        padding-bottom: 5px;
+    }
+
+    .education > div > div > div > img {
+        padding: 0 10px;
+    }
+
+
+
+    /* CONTACT ME
+    ******************************/
+    .contact-form {
+        width: 100%;
+        height: 100%;
+        background-color: var(--gris-anthracite);
+        padding: 50px 0;
+    }
+
+    .title-contact-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    .title-contact-form > img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .title-contact-form > p {
+        font-size: 25px;
+        font-weight: 800;
+        color: var(--blanc);
+        margin-left: 15px;
+    }
+
+    .form-contact-infos {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 100px; 
+    }
+
+    form > div {
+        display: flex;
+        flex-direction: row;
+        color: var(--blanc);
+        padding-bottom: 20px;
+    }
+
+    form > div > label {
+        width: 100px;
+        color: var(--blanc);
+        font-size: 15px;
+        font-weight: 800;
+        margin-right: 15px;
+    }
+
+    form > div > label > span {
+        color: var(--violet-clair);
+        font-size: 20px;
+    }
+
+    #name, #email, #subject {
+        color: var(--blanc);
+        width: 320px;
+        height: 30px;
+        background-color: var(--gris-sombre);
+        border: none;
+        padding: 5px;
+    }
+
+    #message {
+        font-family: 'Lato', sans-serif;
+        color: var(--blanc);
+        width: 320px;
+        height: 120px;
+        background-color: var(--gris-sombre);
+        border: none;
+        resize: none;
+        padding: 5px;
+    }
+
+    .address-phone > p {
+        color: var(--gris-clair);
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+
+    .address-phone > p:first-child {
+        color: var(--blanc);
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    .address-phone > button {
+        color: var(--blanc);
+        font-size: 15px;
+        font-weight: 800;
+        width: 110px;
+        height: 40px;
+        background-color: var(--violet-clair);
+        margin-top: 110px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .address-phone > button:hover {
+        background-color: var(--violet-sombre);
+    }
+
+    .address-phone > button > img {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+    }
+
+
+
+/* FOOTER
+******************************/
+footer {
+    position: relative;
+    width: 100%;
+    height: 195px;
+    background-color: var(--noir-profond);
+    color: var(--gris-sombre);
+    font-size: 15px;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.back-to-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: var(--blanc);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.back-to-top:hover {
+    background-color: var(--violet-clair);
+}
+
+.arrow-top-icon {
+    width: 25px;
+    height: 25px;
+    background: center / contain no-repeat url(Images/Icones/fleche-retour-noir-profond.png);
+}
+
+.back-to-top:hover .arrow-top-icon {
+    background-image: url(Images/Icones/fleche-retour-blanc.png);
+}
+
+/* SOCIAL ICONS
+******************************/
+.social-icons-container {
+    display: flex;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--gris-sombre);
+    border-radius: 50%;
+    background: none;
+    margin: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    border-color: var(--blanc);
+}
+
+.social-icon > div {
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* INDIVIDUAL SOCIAL ICONS */
+.linkedin-icon {
+    background-image: url(Images/Icones/linkedin-gris-fonce.png);
+}
+
+.social-icon:hover .linkedin-icon {
+    background-image: url(Images/Icones/linkedin-violet-clair.png);
+}
+
+.github-icon {
+    background-image: url(Images/Icones/github-gris-fonce.png);
+}
+
+.social-icon:hover .github-icon {
+    background-image: url(Images/Icones/github-violet-clair.png);
+}
+
+.instagram-icon {
+    background-image: url(Images/Icones/instagram-gris-fonce.png);
+}
+
+.social-icon:hover .instagram-icon {
+    background-image: url(Images/Icones/instagram-violet-clair.png);
+}
+
+.discord-icon {
+    background-image: url(Images/Icones/discord-gris-fonce.png);
+}
+
+.social-icon:hover .discord-icon {
+    background-image: url(Images/Icones/discord-violet-clair.png);
+}
+
+footer > div > p > span {
+    color: var(--blanc);
+}
+
+.credits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credits > img {
+    width: 5px;
+    height: 5px;
+    margin: 0 20px;
+}
+
+.credits > img:hover {
+    content: url(Images/Icones/linkedin-violet-clair.png);
+}
