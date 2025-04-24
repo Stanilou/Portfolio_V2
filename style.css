@@ -146,7 +146,6 @@ header > div > button > a > img {
         font-size: 65px; 
         font-weight: 800;
         margin: 0;
-        text-shadow: 0 0 5px var(--blanc), 0 0 10px var(--violet-clair), 0 0 15px var(--blanc);
     }
 
     .separation-line {
@@ -182,7 +181,7 @@ header > div > button > a > img {
 
     .social-icon-home:hover {
         border-color: var(--blanc);
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
     .social-icon-home > div {
@@ -319,16 +318,10 @@ header > div > button > a > img {
     }
 
     .about-me button {
-        color: var(--blanc);
-        font-size: 15px;
-        font-weight: 800;
         background-color: var(--violet-clair);
         border: none;
         border-radius: 5px;
         margin-left: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 200px;
         height: 40px;
     }
@@ -337,7 +330,17 @@ header > div > button > a > img {
         background-color: var(--violet-sombre);
     }
 
-    .about-me button > img {
+    .about-me button > a {
+        color: var(--blanc);
+        font-size: 15px;
+        font-weight: 800;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-me button > a > img {
         width: 20px;
         height: 20px;
         margin-right: 10px;
@@ -579,7 +582,7 @@ footer {
 
 .social-icon:hover {
     border-color: var(--blanc);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .social-icon > div {
