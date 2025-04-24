@@ -227,6 +227,36 @@ header > div > button > a > img {
         background-image: url(Images/Icones/discord-blanc.png);
     }
     
+    .go-to-about {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background-color: var(--blanc);
+        border-radius: 50%;
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 10;
+    }
+    
+    .go-to-about:hover {
+        background-color: var(--violet-clair);
+    }
+    
+    .arrow-bottom-icon {
+        width: 25px;
+        height: 25px;
+        background: center / contain no-repeat url(Images/Icones/fleche-retour-noir-profond.png);
+        transform: rotate(180deg);
+    }
+    
+    .go-to-about:hover .arrow-bottom-icon {
+        background-image: url(Images/Icones/fleche-retour-blanc.png);
+    }
 
     /* ABOUT ME
     ******************************/
