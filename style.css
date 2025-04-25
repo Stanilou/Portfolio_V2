@@ -275,6 +275,7 @@ main > .resume {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        scroll-margin-top: 90px;
     }
 
     .about-me > div > img {
@@ -362,6 +363,7 @@ main > .resume {
         color: var(--gris-anthracite);
         font-style: italic;
         padding: 50px 280px;
+        scroll-margin-top: 90px;
     }
 
     .resume > div > div > div {
@@ -413,18 +415,93 @@ main > .resume {
     /* PROJECTS
     ******************************/
     .projects {
-        width: 1920px;
-        height: 500px;
+        padding: 50px auto;
+        scroll-margin-top: 140px;
     }
+
+    .projects > p {
+        color: var(--blanc);
+        font-weight: 800;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .projects > div > div {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin: 0 0 50px;
+    }
+
+    .projects > div > div > div > img {
+        width: 200px;
+        height: 200px;
+        filter: saturate(0%);
+    }
+
+
+    .project-item {
+        position: relative;
+        width: 200px;
+        height: 200px;
+    }
+      
+    .project-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0%);
+        transition: 0.3s ease;
+    }
+      
+    .project-item:hover > img {
+        filter: saturate(0%) blur(2px) brightness(0.3);
+    }
+      
+    .overlay-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        opacity: 0;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: 0.3s ease;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .overlay-text > img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+      
+    .project-item:hover .overlay-text {
+        opacity: 1;
+    }  
 
 
 
     /* INTERESTS
     ******************************/
     .interests {
-        width: 1920px;
+        width: 100vw;
         height: 500px;
         background-color: var(--blanc);
+        scroll-margin-top: 90px;
     }
 
 
@@ -437,6 +514,7 @@ main > .resume {
         height: 100%;
         background-color: var(--gris-anthracite);
         padding: 50px 0;
+        scroll-margin-top: 90px;
     }
 
     .title-contact-form {
@@ -447,12 +525,12 @@ main > .resume {
     }
 
     .title-contact-form > img {
-        width: 35px;
-        height: 35px;
+        width: 25px;
+        height: 25px;
     }
 
     .title-contact-form > p {
-        font-size: 25px;
+        font-size: 15px;
         font-weight: 800;
         color: var(--blanc);
         margin-left: 15px;
