@@ -108,6 +108,10 @@ header > div > button > a > img {
 /* MAIN
 ******************************/
 
+main > .resume {
+    background-color: var(--blanc);
+}
+
     /* HOME
     ******************************/
     .home {
@@ -122,6 +126,9 @@ header > div > button > a > img {
         height: 100%;
         object-fit: cover; 
         filter: brightness(0.6);
+        position: fixed;
+        z-index: -1;
+        top: 0;
     }
     
     .home > div {
@@ -353,8 +360,8 @@ header > div > button > a > img {
     .resume {
         font-size: 15px;
         color: var(--gris-anthracite);
-        margin: 50px 300px;
         font-style: italic;
+        padding: 50px 280px;
     }
 
     .resume > div > div > div {
@@ -372,6 +379,10 @@ header > div > button > a > img {
         display: flex;
         align-items: flex-start;
         margin-bottom: 50px; 
+    }
+
+    .project-management {
+        margin-bottom: 0;
     }
 
     .education > p, .skills > p, .project-management > p {
@@ -396,6 +407,26 @@ header > div > button > a > img {
     .education > div > div > div > img {
         padding: 0 10px;
     }
+
+
+
+    /* PROJECTS
+    ******************************/
+    .projects {
+        width: 1920px;
+        height: 500px;
+    }
+
+
+
+    /* INTERESTS
+    ******************************/
+    .interests {
+        width: 1920px;
+        height: 500px;
+        background-color: var(--blanc);
+    }
+
 
 
 
@@ -498,6 +529,7 @@ header > div > button > a > img {
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
     }
 
     form > button:hover {
