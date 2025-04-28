@@ -34,4 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
             event.target.classList.add("active");
         });
     });
+
+    const logo = document.getElementById("easter-egg");
+    const sound = document.getElementById("sound");
+    function playSound() {
+        sound.currentTime = 0;
+        sound.play();
+    }
+    logo.addEventListener('click', playSound);
 });
