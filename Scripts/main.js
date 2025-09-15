@@ -42,4 +42,69 @@ document.addEventListener("DOMContentLoaded", () => {
         sound.play();
     }
     logo.addEventListener('click', playSound);
+
+
+    const projects = document.querySelectorAll(".project-item");
+    const modal = document.getElementById("project-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalType = document.getElementById("modal-type");
+    const modalImage = document.getElementById("modal-image");
+    const modalDescription = document.getElementById("modal-description");
+    const closeBtn = document.querySelector(".close-btn");
+
+    const projectDetails = [
+        {
+            title: "P.A.C.T",
+            type: "Web Development",
+            description: "A platform to assist caregivers with accessibility tools and features."
+        },
+        {
+            title: "Tic Tac Toe",
+            type: "Programming",
+            description: "A classic tic-tac-toe game implemented in Java with a simple AI."
+        },
+        {
+            title: "Le Patio",
+            type: "Programming",
+            description: "An interactive virtual visit project developed in JavaScript."
+        },
+        {
+            title: "Irisa Publications",
+            type: "Database",
+            description: "Visualization of scientific publications using PostgreSQL and Globe.gl."
+        },
+        {
+            title: "Tabas'KHO",
+            type: "Web Development",
+            description: "A humorous parody website designed with a custom HTML/CSS/JS stack."
+        },
+        {
+            title: "Cap Sur Bréhat",
+            type: "TeamBuilding",
+            description: "An escape game and treasure hunt on Bréhat island to promote collaboration."
+        },
+    ];
+
+    projects.forEach((project, index) => {
+        project.addEventListener("click", () => {
+            const data = projectDetails[index];
+            modalTitle.textContent = data.title;
+            modalType.textContent = data.type;
+            modalImage.src = data.image;
+            modalDescription.textContent = data.description;
+            modal.style.display = "block";
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+
 });
